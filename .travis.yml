@@ -1,0 +1,20 @@
+sudo: required
+
+install:
+  - git clone https://github.com/Velaa98/IntegracionContinua.git
+  - apt install -y curl nodejs  build-essential libssl-dev
+  - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  - apt install -y nodejs
+  - apt install npm
+  - npm install gitbook-cli -g
+
+script:
+  - gitbook build ./IntegracionContinua
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
