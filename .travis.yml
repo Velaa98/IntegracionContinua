@@ -4,15 +4,15 @@ jdk:
 sudo: required
 
 install:
-  - apt install -y curl nodejs  build-essential libssl-dev git
-  - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-  - apt install -y nodejs
-  - apt install npm
-  - npm install gitbook-cli -g
+  - sudo apt install -y curl nodejs  build-essential libssl-dev git
+  - sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  - sudo apt install -y nodejs
+  - sudo apt install npm
+  - sudo npm install gitbook-cli -g
 
 script:
-  - git clone https://github.com/Velaa98/IntegracionContinua.git
-  - gitbook build ./IntegracionContinua
+  - sudo git clone https://github.com/Velaa98/IntegracionContinua.git
+  - sudo gitbook build ./IntegracionContinua
 
 deploy:
   provider: pages
