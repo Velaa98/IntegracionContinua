@@ -1,6 +1,4 @@
-language: java
-jdk:
-- oraclejdk8
+language: node_js
 sudo: required
 
 install:
