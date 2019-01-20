@@ -2,9 +2,6 @@ language: node_js
 sudo: required
 
 install:
-  - sudo apt install -y curl nodejs  build-essential libssl-dev git
-  - sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-  - sudo apt install -y nodejs
   - sudo apt install npm
   - sudo npm install gitbook-cli -g
 
