@@ -1,10 +1,16 @@
-language: java
-jdk:
-- oraclejdk8
+language: node_js
 sudo: required
 
+addons:
+  apt:
+    packages:
+      - curl
+      - nodejs
+      - build-essential
+      - libssl-dev
+
 install:
-  - sudo npm install gitbook-cli -g
+  - sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 script:
   - sudo git clone https://github.com/Velaa98/IntegracionContinua.git
