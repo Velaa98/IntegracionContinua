@@ -20,6 +20,7 @@ script:
 
 deploy:
   provider: pages
+  local-dir: ./IntegracionContinua/_book
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
