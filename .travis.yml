@@ -8,11 +8,13 @@ addons:
       - nodejs
       - build-essential
       - libssl-dev
+      - npm
 
 install:
   - sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 script:
+  - sudo npm install gitbook-cli -g
   - sudo git clone https://github.com/Velaa98/IntegracionContinua.git
   - sudo gitbook build ./IntegracionContinua
 
